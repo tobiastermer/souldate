@@ -1,3 +1,14 @@
+.demo-layout-transparent {
+    background: url('img/souldate.jpg') center / cover;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+ your background is light. */
+    color: rgb(255, 255, 255);
+}
+
 body {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -34,3 +45,60 @@ body {
     width: 280px;
     font-size: 24px;
 }
+
+.mdl-textfield__label {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.mdl-textfield__input {
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#timer {
+    font-size: 60px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    width: 280px;
+    height: 10px;
+    border-radius: 3px;  
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
