@@ -37,8 +37,8 @@
             <span class="mdl-layout-title">Seelen-Date</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link" href="start.html">Start</a>
-                <a class="mdl-navigation__link" href="questions.html">Fragen</a>
+                <a class="mdl-navigation__link" href="modus.html">Modus</a>
+                <a class="mdl-navigation__link" href="namesandlength.html">Spieler und Länge</a>
                 <a class="mdl-navigation__link" href="timer.html">Date</a>
             </nav>
         </div>
@@ -52,14 +52,14 @@
 
                 <form action="#">
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="fieldName1" autocomplete="off">
+                        <input class="mdl-textfield__input" type="text" id="fieldNamePerson1" autocomplete="off">
                         <label class="mdl-textfield__label" for="fieldNamePerson1">Name der 1. Person</label>
                     </div>
                 </form>
 
                 <form action="#">
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="fieldName2" autocomplete="off">
+                        <input class="mdl-textfield__input" type="text" id="fieldNamePerson2" autocomplete="off">
                         <label class="mdl-textfield__label" for="fieldNamePerson2">Name der 2. Person</label>
                     </div>
                 </form>
@@ -67,10 +67,10 @@
                 <div class="content" id="fieldTimerSelected">05 : 00</div>
 
                 <div class="slidecontainer">
-                    <input type="range" min="5" max="600" value="300" step="5" class="slider" id="sliderTimeSelected" oninput="selectTimer()">
+                    <input type="range" min="5" max="600" value="300" step="5" class="slider" id="sliderTimeSelected" oninput="setTimer()">
                 </div>
 
-                <button onclick="window.location.href='start.html';"
+                <button onclick="goToTimer();"
                     class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button buttonStart">
                     Fortfahren
                 </button>

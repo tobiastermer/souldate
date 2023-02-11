@@ -21,6 +21,7 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 24px;
+    line-height: 120%
 }
 
 .button {
@@ -63,9 +64,7 @@ form {
     font-size: 24px;
 }
 
-#timer {
-    font-size: 60px;
-}
+
 
 .slider {
     display: flex;
@@ -77,28 +76,44 @@ form {
     margin-bottom: 40px;
     width: 280px;
     height: 10px;
-    border-radius: 3px;  
+    border-radius: 3px;
     background: #ffffff;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%; 
-    background: #ffffff;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: #ffffff;
     cursor: pointer;
-  }
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+#fieldTimer {
+    font-size: 80px;
+}
+
+.timerbuttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+}
+
+.minibuttons {
+    height: 65px;
+}
