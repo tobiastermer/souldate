@@ -46,22 +46,74 @@
             <div class="page-content">
                 <!-- Your content goes here -->
 
-                <div class="content">Wählt einer der folgenden Modi</div>
-                <!-- Raised button with ripple -->
-                <button onclick="window.location.href='namesandlength.html';"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button buttonStart">
-                    Freier Modus
-                </button>
-                <!-- Raised button with ripple -->
-                <button onclick="window.location.href='questions.html';"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button buttonStart">
-                    Frage auswählen
-                </button>
-                <!-- Raised button with ripple -->
-                <button onclick="window.location.href='questions.html';"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button buttonStart">
-                    Zufällige Frage
-                </button>
+                <div class="contentWithoutPadding">Wähle einen Modus aus:</div>
+
+                <!-- Icon List -->
+                <ul class="demo-list-icon mdl-list">
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Freier Modus')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Freier Modus.jpg" alt="">
+                                Freier Modus
+                            </span>
+                        </div>
+                    </li>
+                    
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Gefühle')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Gefuehle.jpg" alt="">
+                                Gefühle
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Partnerschaft')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Partnerschaft.jpg" alt="">
+                                Partnerschaft
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Zusammenleben')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Zusammenleben.jpg" alt="">
+                                Zusammenleben
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Sexualität')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Sexualitaet.jpg" alt="">
+                                Sexualität
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Kinder')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Kinder.jpg" alt="">
+                                Kinder
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Persönliches Wachstum')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Persoenliches Wachstum.jpg" alt="">
+                                Persönliches Wachstum
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </main>
     </div>
