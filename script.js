@@ -6,7 +6,7 @@ let seconds;
 let text;
 var intervalId;
 let currentPlayer;
-let j = 0;
+let roundCounter;
 
 const questionsFreierModus = ["Spreche darüber, was dir auf dem Herzen liegt. Wenn du nichts mehr zu sagen hast, schaue deinem Gegenüber in die Augen und genieße."]
 
@@ -43,6 +43,9 @@ const questionsPersoenlichesWachstum = ["Was siehst du in deiner Partnerin / dei
     "Was sind im Moment deine drei größten Probleme? Was sind die drei besten Lösungen für jedes dieser Probleme?",
     "Wo verbleibst du zurzeit in deiner Komfortzone und wie kannst du dem begegnen?"];
 
+const questionsGemischterModus = questionsGefuehle.concat(questionsPartnerschaft, questionsSexualitaet, questionsKinder, questionsZusammenleben, questionsPersoenlichesWachstum);
+
+
 var questionsCategorySelected = [];
 
 function saveQuestionsAndGoToNamesAndLength(category) {
@@ -69,7 +72,7 @@ function goToTimer() {
     setTimer();
     NamePerson1 = document.getElementById('fieldNamePerson1').value;
     NamePerson2 = document.getElementById('fieldNamePerson2').value;
-    //localStorage.setItem('storage_timeSelected', timeSelected);
+    localStorage.setItem('storage_timeSelected', timeSelected);
     //localStorage.setItem('storage_minutes', minutes);
     //localStorage.setItem('storage_seconds', seconds);
     localStorage.setItem('storage_text', text);
@@ -77,6 +80,16 @@ function goToTimer() {
     localStorage.setItem('storage_namePerson2', NamePerson2);
     window.location.href = 'timer.html';
     fieldTimer.innerHTML = text;
+}
+
+function getNamesAndLength() {
+
+    if (localStorage.getItem('storage_namePerson1') != "") {
+        document.getElementById("fieldNamePerson1").value = localStorage.getItem('storage_namePerson1');
+        document.getElementById("fieldNamePerson2").value = localStorage.getItem('storage_namePerson2');
+        document.getElementById("sliderTimeSelected").value = localStorage.getItem('storage_timeSelected');
+        setTimer();
+    }
 }
 
 function getTimerAndNames() {
@@ -88,6 +101,8 @@ function getTimerAndNames() {
 
     if (selectedCategory == "Freier Modus") {
         questionsCategorySelected = questionsFreierModus.slice();
+    } else if (selectedCategory == "Gemischter Modus") {
+        questionsCategorySelected = questionsGemischterModus.slice();
     } else if (selectedCategory == "Gefühle") {
         questionsCategorySelected = questionsGefuehle.slice();
         selectedCategoryUmlaut = "Gefuehle";
@@ -107,6 +122,8 @@ function getTimerAndNames() {
 
     getQuestion();
     fieldSelectedCategory.innerHTML = "<img class='listPictures' src='img/" + selectedCategoryUmlaut + ".jpg'>" + selectedCategory;
+    roundCounter = 1;
+    fieldRoundCounter.innerHMTL = "Runde " + roundCounter;
 }
 
 function startTimer() {
@@ -119,7 +136,6 @@ function startTimer() {
     intervalId = setInterval(function () {
         if (timeLeftInSeconds > 0 && timerStarted == true) {
             timeLeftInSeconds = timeLeftInSeconds - 1;
-            j = j + 1;
             let minutes = timeLeftInSeconds / 60;
             minutes = Math.floor(minutes);
             let seconds = timeLeftInSeconds % 60;
@@ -132,12 +148,8 @@ function startTimer() {
             }
             fieldTimer.innerHTML = text;
 
-            if (j == 60) {
-                getQuestion();
-            }
-
         } else if (timeLeftInSeconds <= 0) {
-            alarm.play();
+            //alarm.play();
         }
     }, 1000);
     timerStarted = true;
@@ -146,34 +158,32 @@ function startTimer() {
 function interruptTimer() {
     timerStarted = false;
     clearInterval(intervalId);
-    alarm.currentTime = 0;
-    alarm.pause();
+    //alarm.currentTime = 0;
+    //alarm.pause();
 }
 
-function reloadTimer() {
-    interruptTimer();
-    fieldTimer.innerHTML = localStorage.getItem('storage_text');
-
+function reloadQuestion() {
+    getQuestion();
 }
 
 function nextPlayer() {
-    reloadTimer();
-    j = 0;
+    interruptTimer();
+    fieldTimer.innerHTML = localStorage.getItem('storage_text');
     if (currentPlayer == 1) {
         currentPlayer = 2;
         fieldPersonOnTurn.innerHTML = localStorage.getItem('storage_namePerson2') + " ist dran";
     } else {
         currentPlayer = 1;
         fieldPersonOnTurn.innerHTML = localStorage.getItem('storage_namePerson1') + " ist dran";
+        getQuestion();
+        roundCounter = roundCounter + 1;
+        fieldRoundCounter.innerHTML = "Runde " + roundCounter;
     }
 }
 
 function getQuestion() {
-
     let obj_keys = Object.keys(questionsCategorySelected);
     randomQuestion = obj_keys[Math.floor(Math.random() * obj_keys.length)];
     fieldQuestion.innerHTML = `${questionsCategorySelected[randomQuestion]}`
-    j = 0
-
 }
 

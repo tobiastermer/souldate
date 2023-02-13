@@ -38,19 +38,20 @@
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="index.html">Home</a>
                 <a class="mdl-navigation__link" href="modus.html">Modus</a>
-                <a class="mdl-navigation__link" href="namesandlength.html">Spieler und Länge</a>
-                <a class="mdl-navigation__link" href="timer.html">Date</a>
+                <a class="mdl-navigation__link" href="namesandlength.html">Einstellungen</a>
+                <a class="mdl-navigation__link" href="timer.html">Spielen</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
-                <div class="content" id="fieldPersonOnTurn">NN ist dran</div>
+                <div class="contentWithoutPadding" id="fieldRoundCounter">Runde 1</div>
+                <div class="contentZweiZeilen" id="fieldPersonOnTurn">NN ist dran</div>
                 <div class="content" id="fieldTimer">05 : 00</div>
                 <div class="timerbuttons">
                     <img src="img/play.png" alt="" class="minibuttons" onclick="startTimer()">
                     <img src="img/pause.png" alt="" class="minibuttons" onclick="interruptTimer()">
-                    <img src="img/reload.png" alt="" class="minibuttons" onclick="reloadTimer()">
+                    <img src="img/reload.png" alt="" class="minibuttons" onclick="reloadQuestion()">
                     <img src="img/next.png" alt="" class="minibuttons" onclick="nextPlayer()">
                 </div>
                 <div class="content" id="fieldQuestion">Hier werden später irgendwelche Fragen und schlaue Kommentare stehen...</div>

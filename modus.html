@@ -38,8 +38,8 @@
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="index.html">Home</a>
                 <a class="mdl-navigation__link" href="modus.html">Modus</a>
-                <a class="mdl-navigation__link" href="namesandlength.html">Spieler und Länge</a>
-                <a class="mdl-navigation__link" href="timer.html">Date</a>
+                <a class="mdl-navigation__link" href="namesandlength.html">Einstellungen</a>
+                <a class="mdl-navigation__link" href="timer.html">Spielen</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -49,12 +49,21 @@
                 <div class="contentWithoutPadding">Wähle einen Modus aus:</div>
 
                 <!-- Icon List -->
-                <ul class="demo-list-icon mdl-list">
+                <ul class="demo-list-icon positionBottom2">
                     <li class="mdl-list__item grab border">
                         <div onclick="saveQuestionsAndGoToNamesAndLength('Freier Modus')">
                             <span class="mdl-list__item-primary-content whitecolor fontsize">
                                 <img class="listPictures" src="img/Freier Modus.jpg" alt="">
                                 Freier Modus
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="mdl-list__item grab border">
+                        <div onclick="saveQuestionsAndGoToNamesAndLength('Gemischter Modus')">
+                            <span class="mdl-list__item-primary-content whitecolor fontsize">
+                                <img class="listPictures" src="img/Gemischter Modus.jpg" alt="">
+                                Gemischter Modus
                             </span>
                         </div>
                     </li>
