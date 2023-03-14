@@ -21,14 +21,25 @@ const questionsPartnerschaft = ["Was bedeutet Partnerschaft für dich?",
     "Was magst du besoners gerne an deiner Partnerin / deinem Partner?",
     "Wofür bist du in unserer Partnerschaft alles dankbar?",
     "Was glaubst du, ist unsere größte gemeinsame Stärke? Und was ist unsere größte gemeinsame Schwäche?",
-    "Welche neue Gewohnheit oder welches Erlebnis würdest du gerne in deiner Partnerschaft integrieren bzw. erleben?"];
+    "Welche neue Gewohnheit oder welches Erlebnis würdest du gerne in deiner Partnerschaft integrieren bzw. erleben?",
+    "In welchen Bereichen leidet unsere Partnerschaft unter Schweigen?", 
+    "Ist in deinem Herzen Bitterkeit gegenüber deinem Partner gewachsen?",
+    "Ist dir dein Partner gleichgültig geworden?",
+    "Entdeckt ihr in eurer Partnerschaft kleine Zeichen (Knospen), die darauf hindeuten, dass Neues aufblüht?",
+    "Damit eine Pflanze blühen kann und Knospen entwickelt, müssen tote Zweige herausgeschnitten werden. Nur so erhält die Pflanze genug Licht. Habt ihr tote Zweige in eurer Partnerschaft, die euch daran hindern, gemeinsam zu blühen? Was tut ihr damit?",
+    "Es gibt Zeiten, in denen eine Pflanze ruht. Wirkt eure Partnerschaft gerade tot? Was könnt ihr tun, damit sie neu belebt wird?"
+
+];
 
 const questionsSexualitaet = ["Wie zufrieden bist du mit deiner Sexualität?",
     "Was findest du an deiner Partnerin / deinem Partner besonders erotisch?",
     "Was sind deine sexuellen Wünsche und Träume? Was möchtest du ausprobieren?"];
 
 const questionsKinder = ["Wie stellst du dir dein späteres Familienleben vor?",
-    "Wie stellst du dir dich als idealen Vater bzw. als ideale Mutter vor?"];
+    "Wie stellst du dir dich als idealen Vater bzw. als ideale Mutter vor?",
+    "Hast du Hoffnung - für uns, für unsere Familie, für unsere Kinder?",
+    "Was gibt dir Hoffnung?",
+    "Wie kannst du mir helfen, neu Hoffnung zu schöpfen?"];
 
 const questionsZusammenleben = ["Wie sieht dein idealer Tag aus?",
     "Wie stellst du dir das optimale Zusammenleben mit deiner Partnerin / deinem Partner vor?",
